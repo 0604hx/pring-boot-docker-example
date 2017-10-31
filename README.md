@@ -13,14 +13,14 @@ spring boot|1.5.8|
 maven|3.2+|
 docker|17.06.2| docker-ce
 
-## Build and run on docker
+## build and run on docker
 
 > I do not use maven docker plugin( e.g.: [spotify](https://github.com/spotify/dockerfile-maven)) for no working Docker set-up on my windows developing machine =.=
 > So I will build and run docker container on remote ubuntu(`16.04 64 bit`) at this section.
 
 [Build and run on docker](build_and_run_on_docker.md)
 
-## Improved deployment
+## improved deployment
 
 So far, we have successfully run our application with docker container.
 
