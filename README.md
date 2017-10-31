@@ -18,7 +18,7 @@ docker|17.06.2| docker-ce
 > I do not use maven docker plugin( e.g.: [spotify](https://github.com/spotify/dockerfile-maven)) for no working Docker set-up on my windows developing machine =.=
 > So I will build and run docker container on remote ubuntu(`16.04 64 bit`) at this section.
 
-[Build and run on docker](build_and_run_on_docker.md)
+[Build and run on docker](docs/build_and_run_on_docker.md)
 
 ## improved deployment
 
@@ -30,7 +30,7 @@ However, there are some problems:
 - [ ] hard to change application properties under the running container
 - [ ] have not persistent data & log file
 
-See [improved deployment](improved_deployment.md) for detail.
+See [improved deployment](docs/improved_deployment.md) for detail.
 
 ## LOGS
 
