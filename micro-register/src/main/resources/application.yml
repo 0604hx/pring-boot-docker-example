@@ -1,0 +1,19 @@
+host: localhost
+spring:
+  application:
+    name: server-register
+
+server:
+  port: 8761    #指定eureka的端口
+
+eureka:
+  instance:
+    hostname: ${host}
+    prefer-ip-address: false
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+  server:
+    enable-self-preservation: false
