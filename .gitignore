@@ -24,3 +24,12 @@ nbdist/
 .nb-gradle/
 
 logs/
+
+### Node.js ###
+node_modules/
+package-lock.json
+
+### python ###
+__pycache__
+python-flask/build
+python-flask/*.spec
