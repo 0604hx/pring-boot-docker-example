@@ -5,9 +5,9 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
-import org.springframework.web.util.WebUtils
+import org.springframework.web.bind.annotation.ResponseBody
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
     SpringApplication.run(MonolithicApp::class.java, *args)
 }
 
-@RestController
+@Controller
 class IndexController {
 
     val logger = LoggerFactory.getLogger(javaClass)
@@ -36,9 +36,17 @@ class IndexController {
 
     val dateFormatter = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
 
-    @RequestMapping("")
+    @ResponseBody
+    @RequestMapping("/about")
     fun whatIsTheTime():String {
         logger.info("service for request...")
         return "[$appName] ${dateFormatter.format(Date())}"
     }
+
+    @ResponseBody
+    @RequestMapping("/config")
+    fun showConfig():String = FileLoader.loadAsString("application.yml")
+
+    @RequestMapping
+    fun index() = "index"
 }
