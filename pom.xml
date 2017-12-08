@@ -6,9 +6,12 @@
 	<groupId>org.nerve</groupId>
 	<artifactId>spring-boot-docker-example</artifactId>
 	<version>1.0.0</version>
+
 	<modules>
 		<module>monolithic-web</module>
+		<module>spring-jdbc</module>
 	</modules>
+
 	<packaging>pom</packaging>
 
 	<name>spring-boot-docker-example</name>

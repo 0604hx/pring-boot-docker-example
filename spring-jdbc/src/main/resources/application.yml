@@ -1,0 +1,12 @@
+dbHost: 192.168.1.131
+
+spring:
+  application:
+    name: jdbc-example
+  datasource:
+    # MySQL：jdbc:mysql://${dbHost}:3306/${dbName}?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://${dbHost}:4000/test?characterEncoding=utf-8&useSSL=false
+    username: root
+
+server:
+  port: 8000
