@@ -1,0 +1,17 @@
+{
+  "name": "node-egg",
+  "version": "1.0.0",
+  "description": "example project base egg.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "0604hx",
+  "license": "ISC",
+  "dependencies": {
+    "egg": "^1.11.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.3.5"
+  }
+}
